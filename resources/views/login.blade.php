@@ -26,7 +26,7 @@
           <a href="#" class="logo">RM <span>.</span></a>
 
           <div class="heading">
-            <h2>RUANG<br>MAHASISWA</h2>
+            <h2>RUANG<br>MAHASISWI</h2>
           </div>
 
         </div>
