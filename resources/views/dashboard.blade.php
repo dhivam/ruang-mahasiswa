@@ -94,7 +94,7 @@
           <p>Untuk informasi terkait layanan akademik, dapat menghubungi wa center pada hari dan jam kerja.</p>
         </div>
         <div class="col-lg-3 cta-btn-container text-center">
-          <a class="cta-btn align-middle" href="wa.me/6281132257272">Akademik wa center</a>
+          <a class="cta-btn align-middle" href="https://wa.me/6281132257272">Akademik wa center</a>
         </div>
       </div>
 

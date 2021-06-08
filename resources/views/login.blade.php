@@ -74,7 +74,7 @@
 
     <footer>
       <p>
-        Teknologi Berbasis Cloud
+        Pemrograman Web Lanjut
       </p>
     </footer>
 

@@ -30,17 +30,33 @@ class LoginController extends Controller
 
             $user = User::where('email', $request->email)->first();
             $id = $user->id;
+
             if ($request->password != $user->password) {
                 return redirect('login');
             } else {
-                session(['id' => $id]);
-                return view('dashboard');
+
+                if ($user->role == 'admin') {
+                    $query = DB::select("SELECT * FROM mahasiswa");
+                    return view('admin/mahasiswa')
+                        ->with('mahasiswa', $query);
+                    // dd($user->role);
+                    session(['id' => $id]);
+                    // return redirect()->route('listmhs');
+                } else {
+                    session(['id' => $id]);
+                    return view('dashboard');
+                }
             }
         } catch (Exception $error) {
             return redirect('login');
         }
     }
-
+    public function admin()
+    {
+        $query = DB::select("SELECT * FROM mahasiswa");
+        return view('admin/mahasiswa')
+            ->with('mahasiswa', $query);
+    }
     public function biodata()
     {
         $id = session()->get('id');
